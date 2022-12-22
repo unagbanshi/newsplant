@@ -10,7 +10,7 @@ export class Newitems extends Component {
   <div className="card-body">
     <h5 className="card-title">{title}<span class="badge text-bg-success">Success</span></h5>
     <p className="card-text">{description}...</p>
-    <p className="card-text"><small class="text-muted">By {!author?"Unknown": author} on {new Date(date).toGMTString()}</small></p>
+    <p className="card-text"><small class="text-muted">By {!author?"Unknown": author} on {new Date(date).toDateString()}</small></p>
     <a href={newsUrl} target=" blank" className="btn btn-sm btn-dark">Read more</a>
   </div>
 </div>
