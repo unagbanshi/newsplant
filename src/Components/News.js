@@ -79,6 +79,7 @@ this.updateNews();
         <div className='container'>
         </div>
         <div className="row">
+          News By Ujjwal
         {this.state.articles.map((element)=>{
            return <div className='col-md-4' key={element.url}>
             <Newitems title={element.title?element.title.slice(0, 45):""} description={element.description?element.description.slice(0, 88):""} imageUrl={element.urlToImage} newsUrl={element.url} auther
