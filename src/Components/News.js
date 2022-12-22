@@ -70,6 +70,7 @@ this.updateNews();
       <div className="container my-1">
         <h1 className='text-center'>NewsMonkey - Top  {this.capitalizeFirstLetter(this.props.category)}headlines</h1>
          {/* {this.state.loading && <Spinner/>}  */}
+         News By Ujjwal
         <InfiniteScroll
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
@@ -79,7 +80,7 @@ this.updateNews();
         <div className='container'>
         </div>
         <div className="row">
-          News By Ujjwal
+        
         {this.state.articles.map((element)=>{
            return <div className='col-md-4' key={element.url}>
             <Newitems title={element.title?element.title.slice(0, 45):""} description={element.description?element.description.slice(0, 88):""} imageUrl={element.urlToImage} newsUrl={element.url} auther
