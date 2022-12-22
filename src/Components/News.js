@@ -67,30 +67,31 @@ this.updateNews();
   };
   render() {
     return (
-      <div className="container my-1">
+      <>
+       News By Ujjwal
+      <></><div className="container my-1">
         <h1 className='text-center'>NewsMonkey - Top  {this.capitalizeFirstLetter(this.props.category)}headlines</h1>
-         {/* {this.state.loading && <Spinner/>}  */}
-         News By Ujjwal
+        {/* {this.state.loading && <Spinner/>}  */}
+
         <InfiniteScroll
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
           hasMore={this.state.articles.length !== this.state.totalResults}
-          loader={<Spinner/>}
+          loader={<Spinner />}
         >
-        <div className='container'>
-        </div>
-        <div className="row">
-        
-        {this.state.articles.map((element)=>{
-           return <div className='col-md-4' key={element.url}>
-            <Newitems title={element.title?element.title.slice(0, 45):""} description={element.description?element.description.slice(0, 88):""} imageUrl={element.urlToImage} newsUrl={element.url} auther
-            ={element.author} date={element.publishedAt}/>
-            </div>
-        })}
-        </div>
+          <div className='container'>
+          </div>
+          <div className="row">
+
+            {this.state.articles.map((element) => {
+              return <div className='col-md-4' key={element.url}>
+                <Newitems title={element.title ? element.title.slice(0, 45) : ""} description={element.description ? element.description.slice(0, 88) : ""} imageUrl={element.urlToImage} newsUrl={element.url} auther={element.author} date={element.publishedAt} />
+              </div>;
+            })}
+          </div>
         </InfiniteScroll>
-     
-      </div>
+
+      </div></>
       
     )
   }
